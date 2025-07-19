@@ -7,6 +7,7 @@ class FramesetArgument
     private string $argumentType;
     private string $function;
     private string $definition;
+    private string $grammaticalCase;
 
     /**
      * A constructor of {@link FramesetArgument} class which takes argumentType and definition as input and initializes corresponding attributes
@@ -14,11 +15,13 @@ class FramesetArgument
      * @param string $argumentType  ArgumentType of the frameset argument
      * @param string $definition  Definition of the frameset argument
      * @param string $function  Function of the frameset argument
+     * @param string $grammaticalCase Grammatical case of the frameset argument
      */
-    public function __construct(string $argumentType, string $definition, string $function){
+    public function __construct(string $argumentType, string $definition, string $function, string $grammaticalCase){
         $this->argumentType = $argumentType;
         $this->function = $function;
         $this->definition = $definition;
+        $this->grammaticalCase = $grammaticalCase;
     }
 
     /**
@@ -52,6 +55,16 @@ class FramesetArgument
     }
 
     /**
+     * Accessor for grammaticalCase.
+     *
+     * @return string grammatical case.
+     */
+    public function getGrammaticalCase(): string
+    {
+        return $this->grammaticalCase;
+    }
+
+    /**
      * Mutator for definition.
      *
      * @param string $definition to set.
@@ -69,6 +82,16 @@ class FramesetArgument
     public function setFunction(string $function): void
     {
         $this->function = $function;
+    }
+
+    /**
+     * Mutator for grammaticalCase.
+     *
+     * @param string $grammaticalCase to set.
+     */
+    public function setGrammaticalCase(string $grammaticalCase): void
+    {
+        $this->grammaticalCase = $grammaticalCase;
     }
 
     /**

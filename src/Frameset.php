@@ -21,7 +21,10 @@ class Frameset
             $this->id = $framesetNode->getAttributeValue("id");
             $argument = $framesetNode->getFirstChild();
             while ($argument != null) {
-                $framesetArgument = new FramesetArgument($argument->getAttributeValue("name"), $argument->getPcData(), $argument->getAttributeValue("function"));
+                $framesetArgument = new FramesetArgument($argument->getAttributeValue("name"),
+                    $argument->getPcData(),
+                    $argument->getAttributeValue("function"),
+                    $argument->getAttributeValue("grammaticalCase"));
                 $this->framesetArguments[] = $framesetArgument;
                 $argument = $argument->getNextSibling();
             }
@@ -53,7 +56,7 @@ class Frameset
      * @param string $definition Definition of the new {@link FramesetArgument}
      * @param string $function Function of the new {@link FramesetArgument}
      */
-    public function addArgument(string $type, string $definition, string $function): void{
+    public function addArgument(string $type, string $definition, string $function, string $grammaticalCase): void{
         $check = false;
         foreach ($this->framesetArguments as $framesetArgument) {
             if ($framesetArgument instanceof FramesetArgument && $framesetArgument->getArgumentType() == $type) {
@@ -63,7 +66,7 @@ class Frameset
             }
         }
         if (!$check) {
-            $arg = new FramesetArgument($type, $definition, $function);
+            $arg = new FramesetArgument($type, $definition, $function, $grammaticalCase);
             $this->framesetArguments[] = $arg;
         }
     }
