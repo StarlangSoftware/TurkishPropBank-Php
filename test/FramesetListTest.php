@@ -12,7 +12,7 @@ class FramesetListTest extends TestCase
 
     public function testFrames()
     {
-        $this->assertEquals(17692, $this->framesetList->size());
+        $this->assertEquals(17531, $this->framesetList->size());
     }
 
     public function testArgSize()
@@ -21,7 +21,7 @@ class FramesetListTest extends TestCase
         for ($i = 0; $i < $this->framesetList->size(); $i++) {
             $count += count($this->framesetList->getFrameSet($i)->getFramesetArguments());
         }
-        $this->assertEquals(29761, $count);
+        $this->assertEquals(29473, $count);
     }
 
     public function testCase()
@@ -80,13 +80,13 @@ class FramesetListTest extends TestCase
                 }
             }
         }
-        $this->assertEquals(422, $caseList["abl"]);
-        $this->assertEquals(4690, $caseList["acc"]);
-        $this->assertEquals(2423, $caseList["dat"]);
-        $this->assertEquals(880, $caseList["gen"]);
-        $this->assertEquals(459, $caseList["ins"]);
-        $this->assertEquals(673, $caseList["loc"]);
-        $this->assertEquals(2069, $caseList["nom"]);
+        $this->assertEquals(418, $caseList["abl"]);
+        $this->assertEquals(4633, $caseList["acc"]);
+        $this->assertEquals(2402, $caseList["dat"]);
+        $this->assertEquals(870, $caseList["gen"]);
+        $this->assertEquals(451, $caseList["ins"]);
+        $this->assertEquals(666, $caseList["loc"]);
+        $this->assertEquals(2049, $caseList["nom"]);
     }
 
     public function testArgName()
@@ -101,10 +101,10 @@ class FramesetListTest extends TestCase
                 }
             }
         }
-        $this->assertEquals(14669, $nameList["ARG0"]);
-        $this->assertEquals(13127, $nameList["ARG1"]);
-        $this->assertEquals(1886, $nameList["ARG2"]);
-        $this->assertEquals(78, $nameList["ARG3"]);
+        $this->assertEquals(14535, $nameList["ARG0"]);
+        $this->assertEquals(12996, $nameList["ARG1"]);
+        $this->assertEquals(1865, $nameList["ARG2"]);
+        $this->assertEquals(76, $nameList["ARG3"]);
         $this->assertEquals(1, $nameList["ARG4"]);
     }
 
@@ -120,17 +120,17 @@ class FramesetListTest extends TestCase
                 }
             }
         }
-        $this->assertEquals(481, $functionList["com"]);
+        $this->assertEquals(475, $functionList["com"]);
         $this->assertEquals(14, $functionList["ext"]);
-        $this->assertEquals(814, $functionList["loc"]);
-        $this->assertEquals(198, $functionList["rec"]);
-        $this->assertEquals(14, $functionList["pat"]);
-        $this->assertEquals(10688, $functionList["ppt"]);
-        $this->assertEquals(605, $functionList["src"]);
-        $this->assertEquals(801, $functionList["gol"]);
+        $this->assertEquals(808, $functionList["loc"]);
+        $this->assertEquals(195, $functionList["rec"]);
+        $this->assertEquals(13, $functionList["pat"]);
+        $this->assertEquals(10579, $functionList["ppt"]);
+        $this->assertEquals(597, $functionList["src"]);
+        $this->assertEquals(794, $functionList["gol"]);
         $this->assertEquals(156, $functionList["tmp"]);
-        $this->assertEquals(14558, $functionList["pag"]);
-        $this->assertEquals(1432, $functionList["dir"]);
+        $this->assertEquals(14425, $functionList["pag"]);
+        $this->assertEquals(1417, $functionList["dir"]);
     }
 
 }
