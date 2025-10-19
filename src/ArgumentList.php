@@ -13,7 +13,7 @@ class ArgumentList
      */
     public function __construct(string $argumentList){
         $this->arguments = [];
-        $items = preg_split( "#", $argumentList);
+        $items = explode( "#", $argumentList);
         foreach ($items as $item) {
             $this->arguments[] = new Argument($item);
         }
