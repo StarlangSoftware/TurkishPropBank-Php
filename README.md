@@ -59,7 +59,7 @@ Simple Web Interface
 Video Lectures
 ============
 
-[<img src=video.jpg width="50%">](https://youtu.be/TeVnGaYuORQ)
+[<img src="https://github.com/StarlangSoftware/TurkishPropBank/blob/master/video.jpg" width="50%">](https://youtu.be/TeVnGaYuORQ)
 
 For Developers
 ============
